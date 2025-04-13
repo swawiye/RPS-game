@@ -14,16 +14,19 @@
             font-size: 30px;
             font-weight: bold;
         }
+        .move-icon {
+            height: 50px;
+        }
     </style>
 </head>
 <body>
     <p class="title">Rock Paper Scissors</p>
 
-    <button onclick="playGame('rock')"><img src="assets/rock-emoji.png" class="move-icon"></button>
+    <button onclick="playGame('rock')" class="move-btn"><img src="assets/rock-emoji.png" class="move-icon"></button>
 
-    <button onclick="playGame('paper')"><img src="assets/paper-emoji.png" class="move-icon"></button>
+    <button onclick="playGame('paper')" class="move-btn"><img src="assets/paper-emoji.png" class="move-icon"></button>
 
-    <button onclick="playGame('scissors')"><img src="assets/scissors-emoji.png" class="move-icon"></button>
+    <button onclick="playGame('scissors')" class="move-btn"><img src="assets/scissors-emoji.png" class="move-icon"></button>
 
     <p class="js-result"></p>
     <p class="js-moves"></p>
