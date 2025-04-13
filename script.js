@@ -9,6 +9,22 @@ function playGame(playerMove) {
         } else if (computerMove === 'scissors') {
             result = 'You win!';
         };
+    } else if (playerMove === 'paper'){
+        if (computerMove === 'rock') {
+            result = 'It is a tie.';
+        } else if (computerMove === 'paper') {
+            result = 'You lose.';
+        } else if (computerMove === 'scissors') {
+            result = 'You win!';
+        };
+    } else if ('scissors') {
+        if (computerMove === 'rock') {
+            result = 'It is a tie.';
+        } else if (computerMove === 'paper') {
+            result = 'You lose.';
+        } else if (computerMove === 'scissors') {
+            result = 'You win!';
+        };
     };
 
     alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);

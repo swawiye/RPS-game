@@ -10,39 +10,9 @@
 
     <button onclick="playGame('rock')">Rock</button>
 
-    <button onclick=
-    "
-    pickComputerMove();
+    <button onclick="playGame('paper')">Paper</button>
 
-    let result = '';
-
-    if (computerMove === 'paper') {
-        result = 'It is a tie.';
-    } else if (computerMove === 'scissors') {
-        result = 'You lose.';
-    } else if (computerMove === 'rock') {
-        result = 'You win!';
-    };
-
-    alert(`You picked paper. Computer picked ${computerMove}. ${result}`);
-    ">Paper</button>
-
-    <button onclick=
-    "
-    pickComputerMove();
-
-    let result = '';
-
-    if (computerMove === 'scissors') {
-        result = 'It is a tie.';
-    } else if (computerMove === 'rock') {
-        result = 'You lose.';
-    } else if (computerMove === 'paper') {
-        result = 'You win!';
-    };
-
-    alert(`You picked scissors. Computer picked ${computerMove}. ${result}`);
-    ">Scissors</button>
+    <button onclick="playGame('scissors')">Scissors</button>
 
     <script type="text/javascript" src="script.js"></script>
 </body>
