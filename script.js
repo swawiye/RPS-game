@@ -57,8 +57,14 @@ function playGame(playerMove) {
         score.wins += 1; //'+=' increase the score by one
     } else if (result === 'You lose.') {
         score.losses += 1;
-    }
-    alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+    } else if (result === 'It is a tie.') {
+        score.ties += 1;
+    };
+
+    alert(`
+        You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+        Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
+        `);
 };
 
 
