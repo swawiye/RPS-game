@@ -7,6 +7,7 @@ const score = JSON.parse(localStorage.getItem('score')) || {
 
 console.log(score);
 
+document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
 /* 
 //Checking if the score is null, Restores 'null' to the default score
 if (score === null) { //'score === null' is the same as '!score'
@@ -77,9 +78,7 @@ function playGame(playerMove) {
 
     localStorage.setItem('score', JSON.stringify(score)); //localStorage only supports strings, 'JSON.stringify()' converts obejcts into strings
 
-    alert(`
-        You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-        Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+    alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
 };
 
 //RESET SCORE
