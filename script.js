@@ -5,6 +5,8 @@ const score = {
     ties: 0
 };
 
+console.log(localStorage.getItem('score')); //gets the value out of localStorage
+
 function playGame(playerMove) {
     let computerMove = '';    
     
@@ -53,6 +55,7 @@ function playGame(playerMove) {
         };
     };
 
+    //UPDATE SCORE
     if (result === 'You win!') {
         score.wins += 1; //'+=' increase the score by one
     } else if (result === 'You lose.') {
@@ -60,6 +63,8 @@ function playGame(playerMove) {
     } else if (result === 'It is a tie.') {
         score.ties += 1;
     };
+
+    localStorage.setItem('score', JSON.stringify(score)); //localStorage only supports strings, 'JSON.stringify()' converts obejcts into strings
 
     alert(`
         You picked ${playerMove}. Computer picked ${computerMove}. ${result}
@@ -74,40 +79,4 @@ function resetScore() {
 };
 
  
-/* SYNTAX FOR FUNCTIONS 
-function functionName() {
-    function body;
-};
-functionName(); -calling the function to run the code inside the function
 
-EX:
-function function1() {
-    console.log('hello');
-    console.log('2+2');
-};
-
-function1();
-*/
-
-/* 
-//PARAMETERS
-function calculateTax(cost) {
-    console.log(cost * 0.1);
-};
-calculateTax(2000);
-calculateTax(5000);
-
-function calculateTax(cost, taxPercent = 0.1) {
-    console.log(cost * taxPercent);
-};
-calculateTax(2000, 0.2);
-
-
-function functionName(parameterName) {
-    console.log(parameterName * 0.1);
-};
-calculateTax(parameterValue[ex:2000]); //passing a value into the parameter
-
-Parameter only exists inside the function scope
-
-*/
