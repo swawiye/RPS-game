@@ -1,3 +1,10 @@
+//The Scores
+const score = {
+    wins: 0,
+    losses: 0,
+    ties: 0
+};
+
 function playGame(playerMove) {
     let computerMove = '';    
     
@@ -16,7 +23,8 @@ function playGame(playerMove) {
         //return; //gets a value out of the function, closes off the function 
         };
     pickComputerMove(); //runs the code inside the function
-    
+
+    //To make each button uniquely display its name
     let result = '';
 
     if (playerMove === 'rock') {
@@ -45,14 +53,16 @@ function playGame(playerMove) {
         };
     };
 
+    if (result === 'You win!') {
+        score.wins += 1; //'+=' increase the score by one
+    } else if (result === 'You lose.') {
+        score.losses += 1;
+    }
     alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
 };
 
 
-
-
-
-
+ 
 /* SYNTAX FOR FUNCTIONS 
 function functionName() {
     function body;
@@ -88,4 +98,5 @@ function functionName(parameterName) {
 calculateTax(parameterValue[ex:2000]); //passing a value into the parameter
 
 Parameter only exists inside the function scope
+
 */
