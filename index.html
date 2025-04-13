@@ -6,14 +6,16 @@
     <title>Rock Paper Scissors</title>
     <style>
         body {
-            background-color: black;
-            color: white;
+            background-color: papayawhip;
+            color: sienna;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
         }
 
         .title {
             font-size: 30px;
             font-weight: bold;
+            color: peru;
         }
 
         .move-icon {
@@ -22,10 +24,15 @@
 
         .move-btn {
             background-color: transparent;
-            border: 1px solid white;
+            border: 1px solid peru;
             border-radius: 100px;
             padding: 30px;
             cursor: pointer;
+            margin: 10px;
+        }
+
+        .move-btn:hover {
+            background-color: rgba(236, 209, 174, 0.896);
         }
 
         .result {
@@ -41,15 +48,27 @@
         .reset-btn {
             padding: 8px 15px;
             font-size: 15px;
-            background-color: white;
+            background-color: burlywood;
+            color: black;
             border: none;
             border-radius: 10px;
             cursor: pointer;
         }
+
+        .reset-btn:hover {
+            background-color: peru
+        }
+
+
+        .footer {
+            font-weight: bold;
+            color: peru;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <p class="title">Rock Paper Scissors</p>
+    <p class="title">Rock, Paper, Scissors!</p>
 
     <button onclick="playGame('rock')" class="move-btn"><img src="assets/rock-emoji.png" class="move-icon"></button>
 
@@ -62,6 +81,8 @@
     <p class="js-score score"></p>
 
     <button onclick="resetScore()" class="reset-btn">Reset Score</button>
+
+    <p class="footer">Have fun as you play!</p>
 
     <script type="text/javascript" src="script.js"></script>
 </body>
