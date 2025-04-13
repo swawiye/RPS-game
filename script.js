@@ -7,7 +7,10 @@ const score = JSON.parse(localStorage.getItem('score')) || {
 
 console.log(score);
 
-document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+//MAKE THE SCORE APPEAR ON THE PAGE & UPDATE IT
+updateScoreElement();
+
+
 /* 
 //Checking if the score is null, Restores 'null' to the default score
 if (score === null) { //'score === null' is the same as '!score'
@@ -76,9 +79,23 @@ function playGame(playerMove) {
         score.ties += 1;
     };
 
+    //SAVING THE SCORE IN LOCAL STORAGE
     localStorage.setItem('score', JSON.stringify(score)); //localStorage only supports strings, 'JSON.stringify()' converts obejcts into strings
 
-    alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+    //UPDATE THE SCORE ON THE PAGE
+    updateScoreElement();
+
+
+    //DISPLAY THE RESULT
+    document.querySelector('.js-result').innerHTML = result;
+
+    //DISPLAY THE MOVES
+    document.querySelector('.js-moves').innerHTML = `You ${playerMove} - ${computerMove} Computer`;
+};
+
+//UPDATE THE SCORE
+function updateScoreElement() {
+    document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
 };
 
 //RESET SCORE
@@ -87,6 +104,7 @@ function resetScore() {
     score.losses = 0;
     score.ties = 0;
     localStorage.removeItem('score'); //Remove previous score from localStorage
+    updateScoreElement(); //Resets the score on the page
 };
 
  
