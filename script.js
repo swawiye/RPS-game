@@ -1,11 +1,7 @@
-//The Scores
-const score = {
-    wins: 0,
-    losses: 0,
-    ties: 0
-};
+//SCORES
+const score = JSON.parse(localStorage.getItem('score')); //'JSON.parse()' converts a string back into an object, gets the value out of localStorage
 
-console.log(localStorage.getItem('score')); //gets the value out of localStorage
+console.log(score);
 
 function playGame(playerMove) {
     let computerMove = '';    
@@ -26,7 +22,7 @@ function playGame(playerMove) {
         };
     pickComputerMove(); //runs the code inside the function
 
-    //To make each button uniquely display its name
+    //MAKE EACH BUTTON UNIQUELY DISPLAY ITS NAME
     let result = '';
 
     if (playerMove === 'rock') {
@@ -76,6 +72,7 @@ function resetScore() {
     score.wins = 0;
     score.losses = 0;
     score.ties = 0;
+    localStorage.removeItem('score'); //Remove previous score from localStorage
 };
 
  
