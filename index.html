@@ -8,26 +8,11 @@
 <body>
     <p>Rock Paper Scissors</p>
 
-    <button onclick=
-    "
-    pickComputerMove()
-
-    let result = '';
-
-    if (computerMove === 'rock') {
-        result = 'It is a tie.';
-    } else if (computerMove === 'paper') {
-        result = 'You lose.';
-    } else if (computerMove === 'scissors') {
-        result = 'You win!';
-    };
-
-    alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
-    ">Rock</button>
+    <button onclick="playGame('rock')">Rock</button>
 
     <button onclick=
     "
-    pickComputerMove()
+    pickComputerMove();
 
     let result = '';
 
@@ -44,10 +29,10 @@
 
     <button onclick=
     "
-    pickComputerMove()
+    pickComputerMove();
 
     let result = '';
-    
+
     if (computerMove === 'scissors') {
         result = 'It is a tie.';
     } else if (computerMove === 'rock') {
