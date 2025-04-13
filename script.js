@@ -1,4 +1,22 @@
 function playGame(playerMove) {
+    let computerMove = '';    
+    
+    function pickComputerMove() {
+        const randomNumber = Math.random();
+        
+        if (randomNumber >= 0 && randomNumber < 1/3) {
+        computerMove = 'rock';
+        
+        } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+            computerMove = 'paper';
+        } else if (randomNumber >= 2/3 && randomNumber < 1) {
+            computerMove = 'scissors';
+        };
+    
+        //return; //gets a value out of the function, closes off the function 
+        };
+    pickComputerMove(); //runs the code inside the function
+    
     let result = '';
 
     if (playerMove === 'rock') {
@@ -30,23 +48,9 @@ function playGame(playerMove) {
     alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
 };
 
-let computerMove = '';
 
-function pickComputerMove() {
-    const randomNumber = Math.random();
 
-    if (randomNumber >= 0 && randomNumber < 1/3) {
-        computerMove = 'rock';
-    } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-        computerMove = 'paper';
-    } else if (randomNumber >= 2/3 && randomNumber < 1) {
-        computerMove = 'scissors';
-    };
 
-    //return; //gets a value out of the function, closes off the function 
-};
-
-pickComputerMove(); //runs the code inside the function
 
 
 /* SYNTAX FOR FUNCTIONS 
