@@ -63,10 +63,15 @@ function playGame(playerMove) {
 
     alert(`
         You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-        Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
-        `);
+        Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
 };
 
+//RESET SCORE
+function resetScore() {
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+};
 
  
 /* SYNTAX FOR FUNCTIONS 
