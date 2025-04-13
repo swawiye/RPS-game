@@ -10,12 +10,41 @@
             color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
+
         .title {
             font-size: 30px;
             font-weight: bold;
         }
+
         .move-icon {
             height: 50px;
+        }
+
+        .move-btn {
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 100px;
+            padding: 30px;
+            cursor: pointer;
+        }
+
+        .result {
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        .score {
+            margin-top: 50px;
+        }
+
+        .reset-btn {
+            padding: 8px 15px;
+            font-size: 15px;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -28,11 +57,11 @@
 
     <button onclick="playGame('scissors')" class="move-btn"><img src="assets/scissors-emoji.png" class="move-icon"></button>
 
-    <p class="js-result"></p>
+    <p class="js-result result">You win.</p>
     <p class="js-moves"></p>
-    <p class="js-score"></p>
+    <p class="js-score score"></p>
 
-    <button onclick="resetScore()">Reset Score</button>
+    <button onclick="resetScore()" class="reset-btn">Reset Score</button>
 
     <script type="text/javascript" src="script.js"></script>
 </body>

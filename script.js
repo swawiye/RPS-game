@@ -90,7 +90,13 @@ function playGame(playerMove) {
     document.querySelector('.js-result').innerHTML = result;
 
     //DISPLAY THE MOVES
-    document.querySelector('.js-moves').innerHTML = `You ${playerMove} - ${computerMove} Computer`;
+    document.querySelector('.js-moves').innerHTML = 
+    `
+        You 
+        <img src="assets/${playerMove}-emoji.png" class="move-icon">
+        <img src="assets/${computerMove}-emoji.png" class="move-icon">
+        Computer
+    `;
 };
 
 //UPDATE THE SCORE
