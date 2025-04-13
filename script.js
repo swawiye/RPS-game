@@ -1,7 +1,22 @@
 //SCORES
-const score = JSON.parse(localStorage.getItem('score')); //'JSON.parse()' converts a string back into an object, gets the value out of localStorage
+const score = JSON.parse(localStorage.getItem('score')) || {
+    wins: 0,
+    losses: 0,
+    ties: 0
+ }; //'JSON.parse()' converts a string back into an object, gets the value out of localStorage
 
 console.log(score);
+
+/* 
+//Checking if the score is null, Restores 'null' to the default score
+if (score === null) { //'score === null' is the same as '!score'
+    score = {
+        wins: 0,
+        losses: 0,
+        ties: 0
+    };
+};
+*/
 
 function playGame(playerMove) {
     let computerMove = '';    
